@@ -1,0 +1,97 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: $font-m;
+  font-family: "Outfit", sans-serif;
+  font-weight: $font-weight-s;
+  color: $dark-charcoal;
+  line-height: 1.5;
+
+  h1, h2 {
+    font-family: "Young Serif", sans-serif;
+  }
+
+  h1 {
+    font-size: $font-h1-s;
+    line-height: 1;
+
+    @include breakpoint-up(large) {
+      font-size: $font-h1-l;
+    }
+
+  }
+
+  h2 {
+    font-size: $font-h2;
+    color: $nutmeg;
+  }
+
+
+  b {
+    font-weight: $font-weight-m;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0.5rem;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+
+      &::before {
+        content: "•";
+        color: $dark-raspberry;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  ol {
+    padding-left: 1.5rem; // move list to the left
+    margin: 0;
+
+    li {
+      padding-left: 1rem; // move text away from enumeration
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+
+      &::marker {
+        color: $dark-raspberry;
+        font-weight: $font-weight-m;
+      }
+    }
+
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $dark-charcoal;
+
+    a {
+      color: $dark-raspberry;
+    }
+  }
+}
